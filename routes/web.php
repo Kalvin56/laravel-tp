@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ConcessionIteratorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FacadeController;
 use App\Http\Controllers\FactoryController;
@@ -25,5 +26,7 @@ Route::get('/singleton', [SingletonController::class, 'show']);
 Route::get('/factory', [FactoryController::class, 'show']);
 
 Route::get('/facade', [FacadeController::class, 'show']);
+
+Route::get('/concession_iterator', [ConcessionIteratorController::class, 'show']);
 
 

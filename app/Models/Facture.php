@@ -8,8 +8,13 @@
         public function __construct(){}
 
         public function addVoiture($voiture){
-            $price = $voiture->getPrice();
+            $price = $voiture->getPrix();
             $this->montant += $price;
         }
+
+        public function getMontant(){
+            return $this->montant;
+        }
+
     }
 ?>

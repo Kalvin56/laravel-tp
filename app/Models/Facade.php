@@ -9,7 +9,7 @@
             $usine = new Usine();
             $v1 = $usine->fabriquer('Renault');
             $v2 = $usine->fabriquer('Opel');
-            $concession = new Concession();
+            $concession = new Concession('Super Concession');
             $concession->addVoiture($v1);
             $concession->addVoiture($v2);
             $facture = new Facture();
