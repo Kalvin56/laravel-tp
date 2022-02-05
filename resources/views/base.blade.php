@@ -4,6 +4,9 @@
     @include("head")
 </head>
 <body>
-    @yield("content")
+    @include("nav")
+    <div class="container-fluid">
+        @yield("content")
+    </div>
 </body>
 </html>

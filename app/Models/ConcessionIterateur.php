@@ -4,20 +4,24 @@ namespace App\Models;
 
 class ConcessionIterateur{
     private $offset = 0;
-    private $concession;
+    private $collection;
 
-    public function __construct($concession){
-        $this->concession = $concession;
+    public function __construct($collection){
+        $this->collection = $collection;
+    }
+
+    public function current(){
+        return $this->collection->getVoitures()[$this->offset];
     }
 
     public function next(){
         $this->offset++;
-        return $this->concession[$this->offset];
     }
 
     public function hasNext(){
-        $length = $this->concession->getNbVoitures();
-        return $this->offset++ > $length;
+        $length = $this->collection->getNbVoitures();
+        $off = $this->offset + 1;
+        return $off <= $length;
     }
 
 

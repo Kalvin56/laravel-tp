@@ -1,10 +1,12 @@
 <?php
 
-use App\Http\Controllers\ConcessionIteratorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FacadeController;
 use App\Http\Controllers\FactoryController;
+use App\Http\Controllers\ObserverController;
+use App\Http\Controllers\StrategyController;
 use App\Http\Controllers\SingletonController;
+use App\Http\Controllers\ConcessionIteratorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +19,7 @@ use App\Http\Controllers\SingletonController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SingletonController::class, 'show']);
 
 Route::get('/singleton', [SingletonController::class, 'show']);
 
@@ -27,6 +27,10 @@ Route::get('/factory', [FactoryController::class, 'show']);
 
 Route::get('/facade', [FacadeController::class, 'show']);
 
-Route::get('/concession_iterator', [ConcessionIteratorController::class, 'show']);
+Route::get('/concession_iterateur', [ConcessionIteratorController::class, 'show']);
+
+Route::get('/observer', [ObserverController::class, 'show']);
+
+Route::get('/strategy', [StrategyController::class, 'show']);
 
 

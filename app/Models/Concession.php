@@ -26,6 +26,11 @@ class Concession{
         return count($this->voitures);
     }
 
+    public function getIterator()
+    {
+        return new ConcessionIterateur($this);
+    }
+
 }
 
 ?>

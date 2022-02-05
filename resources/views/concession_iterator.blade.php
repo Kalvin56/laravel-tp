@@ -2,10 +2,12 @@
 
 @section("content")
     <h1>Concession Iterator</h1>
-    <?php 
-        while($concessionIterator->hasNext()){
-            $voiture = $concessionIterator->next();
-            echo $voiture->getName();
+    <?php
+        $iterator = $concession->getIterator();
+        while($iterator->hasNext()){
+            $voiture = $iterator->current();
+            echo $voiture->getName(). "\n";
+            $iterator->next();
         }
     ?>
 @endsection
