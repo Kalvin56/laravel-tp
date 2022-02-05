@@ -5,8 +5,10 @@ namespace App\Models;
 abstract class Voiture{
     private $name;
     private $prix;
+    private $marque;
 
-    public function __construct($name, $prix){
+    public function __construct($marque, $name, $prix){
+        $this->marque = $marque;
         $this->name = $name;
         $this->prix = $prix;
     }
@@ -19,6 +21,18 @@ abstract class Voiture{
     public function getPrix()
     {
         return $this->prix;
+    }
+
+    public function getMarque(){
+        return $this->marque;
+    }
+
+    public function getClass(): Object{
+        return $this;
+    }
+
+    public function getText(){
+        return $this->getClass()->getOptions();
     }
 }
 

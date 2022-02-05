@@ -5,6 +5,7 @@ use App\Http\Controllers\FacadeController;
 use App\Http\Controllers\FactoryController;
 use App\Http\Controllers\ObserverController;
 use App\Http\Controllers\StrategyController;
+use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\SingletonController;
 use App\Http\Controllers\ConcessionIteratorController;
 
@@ -32,5 +33,7 @@ Route::get('/concession_iterateur', [ConcessionIteratorController::class, 'show'
 Route::get('/observer', [ObserverController::class, 'show']);
 
 Route::get('/strategy', [StrategyController::class, 'show']);
+
+Route::get('/template', [TemplateController::class, 'show']);
 
 
