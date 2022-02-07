@@ -29,6 +29,9 @@
       <li class="nav-item">
         <a class="nav-link" href="/command">Command</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/composite">Composite</a>
+      </li>
     </ul>
   </div>
 </nav>

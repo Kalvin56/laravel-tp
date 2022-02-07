@@ -6,6 +6,7 @@ use App\Http\Controllers\FactoryController;
 use App\Http\Controllers\ObserverController;
 use App\Http\Controllers\StrategyController;
 use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\CompositeController;
 use App\Http\Controllers\SingletonController;
 use App\Http\Controllers\ConcessionIteratorController;
 
@@ -39,4 +40,6 @@ Route::get('/template', [TemplateController::class, 'show']);
 Route::get('/command', function(){
     return view('command');
 });
+
+Route::get('/composite', [CompositeController::class, 'show']);
 
