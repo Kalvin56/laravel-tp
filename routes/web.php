@@ -36,4 +36,7 @@ Route::get('/strategy', [StrategyController::class, 'show']);
 
 Route::get('/template', [TemplateController::class, 'show']);
 
+Route::get('/command', function(){
+    return view('command');
+});
 

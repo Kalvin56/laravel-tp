@@ -26,6 +26,9 @@
       <li class="nav-item">
         <a class="nav-link" href="/template">Template</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/command">Command</a>
+      </li>
     </ul>
   </div>
 </nav>
